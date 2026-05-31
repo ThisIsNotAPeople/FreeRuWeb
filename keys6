@@ -1,0 +1,157 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "servers": [
+      "https://1.1.1.1/dns-query",
+      "https://dns.google/dns-query",
+      "localhost"
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      }
+    },
+    {
+      "tag": "http-in",
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "[AUTO] #6 FRW - 01",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "87.120.219.167",
+            "port": 443,
+            "users": [
+              {
+                "id": "01cd6911-156d-4ba6-a3d5-518985275cc0",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "pypi.org",
+          "fingerprint": "firefox",
+          "publicKey": "pJTTlleR9ShI0KRCRYdvVX8RUak7boh0ZbdsYsnZexc",
+          "shortId": "a4fa4d4345d0319e",
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "[AUTO] #6 FRW - 02",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "93.152.207.225",
+            "port": 443,
+            "users": [
+              {
+                "id": "01cd6911-156d-4ba6-a3d5-518985275cc0",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "community.cloudflare.steamstatic.com",
+          "fingerprint": "safari",
+          "publicKey": "cBMmEvgDlDdm7m_qD-Z_zLws1L87YxaQLtUYoxgLzyU",
+          "shortId": "a4bc3bcc15567d6e",
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "[AUTO] #6 FRW - 03",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "nid2.pink-perfect.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "1ae1597b-e32e-405a-a5b5-8a3bc48a208b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "nid2.pink-perfect.ru",
+          "fingerprint": "chrome",
+          "publicKey": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
+          "shortId": "8ffa160e608bf539",
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "observatory": {
+    "subjectSelector": [
+      "[AUTO] #6 FRW - "
+    ],
+    "probeURL": "https://www.gstatic.com/generate_204",
+    "probeInterval": "30s"
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "balancers": [
+      {
+        "tag": "[AUTO] #6 FRW",
+        "selector": [
+          "[AUTO] #6 FRW - "
+        ],
+        "strategy": {
+          "type": "leastPing"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "field",
+        "balancerTag": "[AUTO] #6 FRW",
+        "network": "tcp,udp"
+      }
+    ]
+  }
+}
