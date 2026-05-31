@@ -11,8 +11,8 @@
   "inbounds": [
     {
       "tag": "socks-in",
-      "listen": "127.0.0.1",
       "port": 10808,
+      "listen": "127.0.0.1",
       "protocol": "socks",
       "settings": {
         "udp": true
@@ -20,10 +20,9 @@
     },
     {
       "tag": "http-in",
-      "listen": "127.0.0.1",
       "port": 10809,
-      "protocol": "http",
-      "settings": {}
+      "listen": "127.0.0.1",
+      "protocol": "http"
     }
   ],
   "outbounds": [
@@ -560,10 +559,7 @@
       },
       {
         "type": "field",
-        "inboundTag": [
-          "socks-in",
-          "http-in"
-        ],
+        "network": "tcp,udp",
         "balancerTag": "AUTO"
       }
     ]
