@@ -1,5 +1,5 @@
 {
-  "remarks": "[AUTO] FRW",
+  "remarks": "[AUTO] FRW BEST",
   "log": {
     "loglevel": "warning"
   },
@@ -11,13 +11,31 @@
       "protocol": "socks",
       "settings": {
         "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "routeOnly": false
       }
     },
     {
       "tag": "http-in",
       "listen": "127.0.0.1",
       "port": 10809,
-      "protocol": "http"
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "routeOnly": false
+      }
     }
   ],
   "outbounds": [
@@ -1912,7 +1930,7 @@
     "subjectSelector": [
       "frw-auto-"
     ],
-    "probeUrl": "https://www.gstatic.com/generate_204",
+    "probeUrl": "https://connectivitycheck.gstatic.com/generate_204",
     "probeInterval": "30s",
     "enableConcurrency": true
   },
@@ -1920,7 +1938,7 @@
     "domainStrategy": "AsIs",
     "balancers": [
       {
-        "tag": "auto-frw",
+        "tag": "auto-frw-best",
         "selector": [
           "frw-auto-"
         ],
@@ -1948,7 +1966,7 @@
       {
         "type": "field",
         "network": "tcp,udp",
-        "balancerTag": "auto-frw"
+        "balancerTag": "auto-frw-best"
       }
     ]
   }
