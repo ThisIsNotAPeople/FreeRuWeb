@@ -1,6 +1,6 @@
 [
   {
-    "remarks": "[AUTO] VLESS 001 - 🇪🇺 AUTO — Самый быстрый ⚡️",
+    "remarks": "AUTO Бельгия 1",
     "log": {
       "loglevel": "warning"
     },
@@ -41,7 +41,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-001",
+        "tag": "auto-001",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -73,7 +73,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇪🇺 AUTO — Самый быстрый ⚡️ | proxy"
+          "name": "AUTO Бельгия 1"
         }
       },
       {
@@ -105,13 +105,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-001"
+          "outboundTag": "auto-001"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 002 - 🇪🇺 AUTO — Самый быстрый ⚡️",
+    "remarks": "AUTO Бельгия 2",
     "log": {
       "loglevel": "warning"
     },
@@ -152,560 +152,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-002",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "37.49.230.107",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "safari",
-            "publicKey": "ppvT23Dpmf4G9dZLVQJq3Ev9ckq4REa1jJ9gkXqp1zQ",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 AUTO — Самый быстрый ⚡️ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-002"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 003 - 🇪🇺 AUTO — Самый быстрый ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-003",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "117.55.202.41",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "chrome",
-            "publicKey": "pJZdgXS61oBi-VKn1QQ59cJTLn3pRNUryhKGWw2q6gM",
-            "spiderX": "/",
-            "shortId": "f793e9e847fdba7f"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 AUTO — Самый быстрый ⚡️ | proxy-3"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-003"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 004 - 🇪🇺 AUTO — Самый быстрый ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-004",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "tehno.store",
-            "fingerprint": "random",
-            "publicKey": "HzNvl-bydOrvVxyIbLEXsCjyKAI94_6EcaDpjrBPY1c",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 AUTO — Самый быстрый ⚡️ | proxy-4"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-004"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 005 - 🇪🇺 AUTO — Самый быстрый ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-005",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "random",
-            "publicKey": "mZ_4Cw3S5sPCXrNhePTtxMtciM1BsvlorJMa6qWa2lc",
-            "spiderX": "/",
-            "shortId": "14d23a5278d67097"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 AUTO — Самый быстрый ⚡️ | proxy-5"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-005"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 006 - 🇧🇪 AUTO — Бельгия ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-006",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "109.69.218.169",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "cdn-s3.opengate.su",
-            "fingerprint": "random",
-            "publicKey": "6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg",
-            "spiderX": "/",
-            "shortId": "223d6eafc6c6e894"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇧🇪 AUTO — Бельгия ⚡️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-006"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 007 - 🇧🇪 AUTO — Бельгия ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-007",
+        "tag": "auto-002",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -737,7 +184,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇧🇪 AUTO — Бельгия ⚡️ | proxy-2"
+          "name": "AUTO Бельгия 2"
         }
       },
       {
@@ -769,13 +216,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-007"
+          "outboundTag": "auto-002"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 008 - 🇸🇪 AUTO — Швеция ⚡️",
+    "remarks": "AUTO Швеция 1",
     "log": {
       "loglevel": "warning"
     },
@@ -816,7 +263,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-008",
+        "tag": "auto-003",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -847,7 +294,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy"
+          "name": "AUTO Швеция 1"
         }
       },
       {
@@ -879,13 +326,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-008"
+          "outboundTag": "auto-003"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 009 - 🇸🇪 AUTO — Швеция ⚡️",
+    "remarks": "AUTO Швеция 2",
     "log": {
       "loglevel": "warning"
     },
@@ -926,7 +373,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-009",
+        "tag": "auto-004",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -958,7 +405,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy-2"
+          "name": "AUTO Швеция 2"
         }
       },
       {
@@ -990,13 +437,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-009"
+          "outboundTag": "auto-004"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 010 - 🇩🇪 AUTO — Германия ⚡️",
+    "remarks": "AUTO Германия 1",
     "log": {
       "loglevel": "warning"
     },
@@ -1037,7 +484,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-010",
+        "tag": "auto-005",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -1068,7 +515,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇩🇪 AUTO — Германия ⚡️ | proxy"
+          "name": "AUTO Германия 1"
         }
       },
       {
@@ -1100,13 +547,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-010"
+          "outboundTag": "auto-005"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 011 - 🇩🇪 AUTO — Германия ⚡️",
+    "remarks": "AUTO Германия 2",
     "log": {
       "loglevel": "warning"
     },
@@ -1147,7 +594,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-011",
+        "tag": "auto-006",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -1179,7 +626,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇩🇪 AUTO — Германия ⚡️ | proxy-2"
+          "name": "AUTO Германия 2"
         }
       },
       {
@@ -1211,13 +658,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-011"
+          "outboundTag": "auto-006"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 012 - 🇸🇪 AUTO — Швеция ⚡️",
+    "remarks": "AUTO Америка",
     "log": {
       "loglevel": "warning"
     },
@@ -1258,1777 +705,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-012",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "tehno.store",
-            "fingerprint": "random",
-            "publicKey": "HzNvl-bydOrvVxyIbLEXsCjyKAI94_6EcaDpjrBPY1c",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-012"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 013 - 🇸🇪 AUTO — Швеция ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-013",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "random",
-            "publicKey": "mZ_4Cw3S5sPCXrNhePTtxMtciM1BsvlorJMa6qWa2lc",
-            "spiderX": "/",
-            "shortId": "14d23a5278d67097"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-013"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 014 - 🇪🇺 🏳️ AUTO — Списки — 4G",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-014",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "188.225.10.61",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "rutube.ru",
-            "fingerprint": "random",
-            "publicKey": "kxjFIUwFcr4FqL9frdX-hbUJeTYokJWWgVoF4N0tQWg",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 🏳️ AUTO — Списки — 4G | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-014"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 015 - 🇪🇺 🏳️ AUTO — Списки — 4G",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-015",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "176.108.243.43",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "rutube.ru",
-            "fingerprint": "random",
-            "publicKey": "Hc1vE8z2Z6lwtwvB3UUZaZzF6ZeBlGnhFoRSlsvRNUs",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 🏳️ AUTO — Списки — 4G | proxy-3"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-015"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 016 - 🇪🇺 🏳️ AUTO — Списки — 4G",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-016",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "37.139.34.124",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "ads.x5.ru",
-            "fingerprint": "chrome",
-            "publicKey": "FOVEr4SzLDQGUn1yY8-Y_C5mIV6WBJL2sTZKQvK83z4",
-            "spiderX": "/api/876809"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 🏳️ AUTO — Списки — 4G | proxy-6"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-016"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 017 - 🇪🇺 🏳️ AUTO — Списки — 4G",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-017",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "158.160.202.224",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "smartcaptcha.yandexcloud.net",
-            "fingerprint": "random",
-            "publicKey": "NKi-b2FBvSYqeG5SjpRoZKdUBSmPmQEm_MAC9V-pURk",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 🏳️ AUTO — Списки — 4G | proxy-7"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-017"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 018 - 🇪🇺 🏳️ AUTO — Списки — 4G",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-018",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "158.160.202.224",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "ads.x5.ru",
-            "fingerprint": "random",
-            "publicKey": "fbw4jC-4fqbVJ7qbMYFUqc1lSSyiqarNobGhuP5yrXI",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇪🇺 🏳️ AUTO — Списки — 4G | proxy-8"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-018"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 019 - 🇳🇱 AUTO — Скоростной 🏁",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-019",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "117.55.202.41",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "chrome",
-            "publicKey": "pJZdgXS61oBi-VKn1QQ59cJTLn3pRNUryhKGWw2q6gM",
-            "spiderX": "/",
-            "shortId": "f793e9e847fdba7f"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇳🇱 AUTO — Скоростной 🏁 | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-019"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 020 - 🇷🇺 AUTO — YouTube — Без Рекламы ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-020",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "66.90.92.58",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "api.qlean.cc",
-            "fingerprint": "random",
-            "publicKey": "WuCkPPMFatcRlBmS6NfzBFH2Eniradv5aM-II2-AMhU",
-            "spiderX": "/",
-            "shortId": "3f2528c1c6fe4c0d"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇷🇺 AUTO — YouTube — Без Рекламы ⚡️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-020"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 021 - 🇷🇺 AUTO — YouTube — Без Рекламы ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-021",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "66.90.92.58",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "a1.phobos.apple.com",
-            "fingerprint": "safari",
-            "publicKey": "rV_kmYWTBJPPMTS2Fo7garwmvLkyjwVP_4_gbx6nLh8",
-            "spiderX": "/api/",
-            "shortId": "53aae4aabee03eef"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇷🇺 AUTO — YouTube — Без Рекламы ⚡️ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-021"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 022 - 🇩🇪 AUTO — Telegram 📱",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-022",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "152.53.173.94",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "fastsync.xyz",
-            "fingerprint": "random",
-            "publicKey": "FQ-t1B16UdR6QYZyfYRf9PrD5JoEeCrkgRfM-doG4zY",
-            "spiderX": "/",
-            "shortId": "1bc9bcde4b1ef645"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇩🇪 AUTO — Telegram 📱 | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-022"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 023 - 🇩🇪 AUTO — Discord 🟣",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-023",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "152.53.173.94",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "fastsync.xyz",
-            "fingerprint": "random",
-            "publicKey": "FQ-t1B16UdR6QYZyfYRf9PrD5JoEeCrkgRfM-doG4zY",
-            "spiderX": "/",
-            "shortId": "1bc9bcde4b1ef645"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇩🇪 AUTO — Discord 🟣 | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-023"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 024 - 🇵🇱 AUTO — Для звонков ☎️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-024",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "144.31.3.56",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "files.pythonhosted.org",
-            "fingerprint": "firefox",
-            "publicKey": "f7gW_x4XOC-Y-p2r__GCsFA2AmaofJyp5afcAfGc2wA",
-            "spiderX": "/download/",
-            "shortId": "b7c9bcde4b3ef655"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇵🇱 AUTO — Для звонков ☎️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-024"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 025 - 🇩🇪 AUTO — Для соцсетей 📸",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-025",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "152.53.173.94",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "fastsync.xyz",
-            "fingerprint": "random",
-            "publicKey": "FQ-t1B16UdR6QYZyfYRf9PrD5JoEeCrkgRfM-doG4zY",
-            "spiderX": "/",
-            "shortId": "1bc9bcde4b1ef645"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇩🇪 AUTO — Для соцсетей 📸 | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-025"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 026 - 🇫🇮 AUTO — Для игр 🎮",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-026",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "93.152.207.225",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "community.cloudflare.steamstatic.com",
-            "fingerprint": "safari",
-            "publicKey": "cBMmEvgDlDdm7m_qD-Z_zLws1L87YxaQLtUYoxgLzyU",
-            "spiderX": "/",
-            "shortId": "a4bc3bcc15567d6e"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇫🇮 AUTO — Для игр 🎮 | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-026"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 027 - 🇷🇺 AUTO — Для торрентов ✳️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-027",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "66.90.92.58",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "api.qlean.cc",
-            "fingerprint": "random",
-            "publicKey": "WuCkPPMFatcRlBmS6NfzBFH2Eniradv5aM-II2-AMhU",
-            "spiderX": "/",
-            "shortId": "3f2528c1c6fe4c0d"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇷🇺 AUTO — Для торрентов ✳️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-027"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 028 - 🇺🇸 AUTO — Америка ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-028",
+        "tag": "auto-007",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3059,7 +736,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇺🇸 AUTO — Америка ⚡️ | proxy"
+          "name": "AUTO Америка"
         }
       },
       {
@@ -3091,13 +768,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-028"
+          "outboundTag": "auto-007"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 029 - 🇬🇧 AUTO — Англия",
+    "remarks": "AUTO Англия",
     "log": {
       "loglevel": "warning"
     },
@@ -3138,7 +815,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-029",
+        "tag": "auto-008",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3170,7 +847,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇬🇧 AUTO — Англия | proxy"
+          "name": "AUTO Англия"
         }
       },
       {
@@ -3202,13 +879,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-029"
+          "outboundTag": "auto-008"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 030 - 🇧🇪 AUTO — Бельгия ⚡",
+    "remarks": "AUTO Казахстан",
     "log": {
       "loglevel": "warning"
     },
@@ -3249,450 +926,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-030",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "109.69.218.169",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "cdn-s3.opengate.su",
-            "fingerprint": "random",
-            "publicKey": "6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg",
-            "spiderX": "/",
-            "shortId": "223d6eafc6c6e894"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇧🇪 AUTO — Бельгия ⚡ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-030"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 031 - 🇧🇪 AUTO — Бельгия ⚡",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-031",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "109.69.218.168",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "fastsync.xyz",
-            "fingerprint": "firefox",
-            "publicKey": "rV_kmYWTBJPPMTS2Fo7garwmvLkyjwVP_4_gbx6nLh8",
-            "spiderX": "/",
-            "shortId": "d96dad141389399e"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇧🇪 AUTO — Бельгия ⚡ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-031"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 032 - 🇩🇪 AUTO — Германия ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-032",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "85.93.10.112",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "currency.rest",
-            "fingerprint": "random",
-            "publicKey": "jxFvY1W8mS7K8aKMJIsJwbA0MyO4WujHiOVUO-H4T2c",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇩🇪 AUTO — Германия ⚡️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-032"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 033 - 🇩🇪 AUTO — Германия ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-033",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "152.53.173.94",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "fastsync.xyz",
-            "fingerprint": "random",
-            "publicKey": "FQ-t1B16UdR6QYZyfYRf9PrD5JoEeCrkgRfM-doG4zY",
-            "spiderX": "/",
-            "shortId": "1bc9bcde4b1ef645"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇩🇪 AUTO — Германия ⚡️ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-033"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 034 - 🇰🇿 AUTO — Казахстан",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-034",
+        "tag": "auto-009",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3724,7 +958,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇰🇿 AUTO — Казахстан | proxy"
+          "name": "AUTO Казахстан"
         }
       },
       {
@@ -3756,13 +990,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-034"
+          "outboundTag": "auto-009"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 035 - 🇱🇻 AUTO — Латвия ⚡",
+    "remarks": "AUTO Латвия 1",
     "log": {
       "loglevel": "warning"
     },
@@ -3803,7 +1037,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-035",
+        "tag": "auto-010",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3834,7 +1068,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇱🇻 AUTO — Латвия ⚡ | proxy"
+          "name": "AUTO Латвия 1"
         }
       },
       {
@@ -3866,13 +1100,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-035"
+          "outboundTag": "auto-010"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 036 - 🇱🇻 AUTO — Латвия ⚡",
+    "remarks": "AUTO Латвия 2",
     "log": {
       "loglevel": "warning"
     },
@@ -3913,7 +1147,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-036",
+        "tag": "auto-011",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3944,7 +1178,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇱🇻 AUTO — Латвия ⚡ | proxy-2"
+          "name": "AUTO Латвия 2"
         }
       },
       {
@@ -3976,13 +1210,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-036"
+          "outboundTag": "auto-011"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 037 - 🇳🇱 AUTO — Нидерланды ⚡️",
+    "remarks": "AUTO Нидерланды",
     "log": {
       "loglevel": "warning"
     },
@@ -4023,7 +1257,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-037",
+        "tag": "auto-012",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4055,7 +1289,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇳🇱 AUTO — Нидерланды ⚡️ | proxy"
+          "name": "AUTO Нидерланды"
         }
       },
       {
@@ -4087,13 +1321,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-037"
+          "outboundTag": "auto-012"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 038 - 🇵🇱 AUTO — Польша",
+    "remarks": "AUTO Польша",
     "log": {
       "loglevel": "warning"
     },
@@ -4134,7 +1368,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-038",
+        "tag": "auto-013",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4166,7 +1400,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇵🇱 AUTO — Польша | proxy"
+          "name": "AUTO Польша"
         }
       },
       {
@@ -4198,13 +1432,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-038"
+          "outboundTag": "auto-013"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 039 - 🇷🇺 AUTO — Россия ⚡",
+    "remarks": "AUTO Россия 1",
     "log": {
       "loglevel": "warning"
     },
@@ -4245,7 +1479,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-039",
+        "tag": "auto-014",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4277,7 +1511,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇷🇺 AUTO — Россия ⚡ | proxy"
+          "name": "AUTO Россия 1"
         }
       },
       {
@@ -4309,13 +1543,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-039"
+          "outboundTag": "auto-014"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 040 - 🇷🇺 AUTO — Россия ⚡",
+    "remarks": "AUTO Россия 2",
     "log": {
       "loglevel": "warning"
     },
@@ -4356,7 +1590,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-040",
+        "tag": "auto-015",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4388,7 +1622,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇷🇺 AUTO — Россия ⚡ | proxy-2"
+          "name": "AUTO Россия 2"
         }
       },
       {
@@ -4420,13 +1654,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-040"
+          "outboundTag": "auto-015"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 041 - 🇫🇮 AUTO — Финляндия",
+    "remarks": "AUTO Финляндия",
     "log": {
       "loglevel": "warning"
     },
@@ -4467,7 +1701,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-041",
+        "tag": "auto-016",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4499,7 +1733,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇫🇮 AUTO — Финляндия | proxy"
+          "name": "AUTO Финляндия"
         }
       },
       {
@@ -4531,13 +1765,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-041"
+          "outboundTag": "auto-016"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 042 - 🇫🇷 AUTO — Франция ⚡️",
+    "remarks": "AUTO Франция",
     "log": {
       "loglevel": "warning"
     },
@@ -4578,7 +1812,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-042",
+        "tag": "auto-017",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4609,7 +1843,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇫🇷 AUTO — Франция ⚡️ | proxy"
+          "name": "AUTO Франция"
         }
       },
       {
@@ -4641,13 +1875,13 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-042"
+          "outboundTag": "auto-017"
         }
       ]
     }
   },
   {
-    "remarks": "[AUTO] VLESS 043 - 🇫🇷 AUTO — Франция 2 ⚡️",
+    "remarks": "AUTO Франция 2",
     "log": {
       "loglevel": "warning"
     },
@@ -4688,7 +1922,7 @@
     ],
     "outbounds": [
       {
-        "tag": "auto-proxy-043",
+        "tag": "auto-018",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4719,7 +1953,7 @@
           "enabled": false
         },
         "metadata": {
-          "name": "🇫🇷 AUTO — Франция 2 ⚡️ | proxy"
+          "name": "AUTO Франция 2"
         }
       },
       {
@@ -4751,228 +1985,7 @@
         {
           "type": "field",
           "network": "tcp,udp",
-          "outboundTag": "auto-proxy-043"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 044 - 🇸🇪 AUTO — Швеция ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-044",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "tehno.store",
-            "fingerprint": "random",
-            "publicKey": "HzNvl-bydOrvVxyIbLEXsCjyKAI94_6EcaDpjrBPY1c",
-            "spiderX": "/"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-044"
-        }
-      ]
-    }
-  },
-  {
-    "remarks": "[AUTO] VLESS 045 - 🇸🇪 AUTO — Швеция ⚡️",
-    "log": {
-      "loglevel": "warning"
-    },
-    "inbounds": [
-      {
-        "tag": "socks-in",
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      },
-      {
-        "tag": "http-in",
-        "listen": "127.0.0.1",
-        "port": 10809,
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": false
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "auto-proxy-045",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "185.173.223.154",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "58523576-4437-440b-aa34-90d5977d2a89",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "hello.opengate.tech",
-            "fingerprint": "random",
-            "publicKey": "mZ_4Cw3S5sPCXrNhePTtxMtciM1BsvlorJMa6qWa2lc",
-            "spiderX": "/",
-            "shortId": "14d23a5278d67097"
-          }
-        },
-        "mux": {
-          "enabled": false
-        },
-        "metadata": {
-          "name": "🇸🇪 AUTO — Швеция ⚡️ | proxy-2"
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom"
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "geoip:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "domain": [
-            "geosite:private"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "network": "tcp,udp",
-          "outboundTag": "auto-proxy-045"
+          "outboundTag": "auto-018"
         }
       ]
     }
