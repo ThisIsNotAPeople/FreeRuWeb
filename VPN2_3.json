@@ -1,0 +1,228 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "local",
+        "tag": "dns-local"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "urltest",
+      "tag": "auto-group-3",
+      "outbounds": [
+        "group-3-server-1",
+        "group-3-server-2",
+        "group-3-server-3",
+        "group-3-server-4",
+        "group-3-server-5",
+        "group-3-server-6",
+        "group-3-server-7",
+        "group-3-server-8",
+        "group-3-server-9",
+        "group-3-server-10"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 30,
+      "idle_timeout": "30m",
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-1",
+      "server": "185.72.145.121",
+      "server_port": 5000,
+      "uuid": "1cf0f330-88c6-5b9b-866e-607e08cf87d6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0XUuWS1x6kswbVN0rgXLpZ1pTCgnyhk7ItuoklaNoHI",
+          "short_id": "9e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-2",
+      "server": "185.72.145.121",
+      "server_port": 5000,
+      "uuid": "1cf0f330-88c6-5b9b-866e-607e08cf87d6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0XUuWS1x6kswbVN0rgXLpZ1pTCgnyhk7ItuoklaNoHI",
+          "short_id": "9e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-3",
+      "server": "66.90.93.74",
+      "server_port": 8443,
+      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-v1.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/connect"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-4",
+      "server": "212.67.9.113",
+      "server_port": 2200,
+      "uuid": "2aa7f4b1-e859-46d0-b8ac-8587811ab7b1",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-5",
+      "server": "139.100.197.28",
+      "server_port": 52006,
+      "uuid": "7c151368-b0e0-07d0-81e6-54be59e756a7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "search.setlisting.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-6",
+      "server": "139.100.197.28",
+      "server_port": 52006,
+      "uuid": "746cc3cb-653c-07d0-96ed-dece5a5757a2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "search.setlisting.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-7",
+      "server": "94.26.249.216",
+      "server_port": 52006,
+      "uuid": "f110331a-58f8-07d0-a922-e9c3d59fbb49",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "clode.fastaichat.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-8",
+      "server": "94.26.249.216",
+      "server_port": 52006,
+      "uuid": "2867c76e-3211-07d0-9b13-c528d06a29af",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "clode.fastaichat.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-9",
+      "server": "87.228.122.108",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "group-3-server-10",
+      "server": "139.100.197.28",
+      "server_port": 52006,
+      "uuid": "6323e8ea-9b61-07d0-a3df-020301cb30c5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "search.setlisting.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "auto-group-3"
+  }
+}
